@@ -1,6 +1,7 @@
 package com.Try_Cloud.Step_Definition;
 
-import com.Try_Cloud.POM.DashboardPage;
+import com.Try_Cloud.POM.Dashboard.DashboardActions;
+import com.Try_Cloud.POM.Dashboard.DashboardPage;
 import com.Try_Cloud.POM.LoginPage;
 import com.Try_Cloud.Utilities.BrowserUtils;
 import com.Try_Cloud.Utilities.Configuration_Reader;
@@ -21,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class DashboardStepDefinitions {
     Actions actions = new Actions(Driver.getDriver());
     DashboardPage dashboardPage = new DashboardPage();
+    DashboardActions dashboardActions = new DashboardActions();
     LoginPage loginPage = new LoginPage();
     JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
@@ -77,7 +79,7 @@ public class DashboardStepDefinitions {
     @When("user clicks on the {string}")
     public void user_clicks_on_the_module(String string) {
 
-        dashboardPage.clickOnListElement(dashboardPage.modules, string);
+        dashboardActions.clickOnListElement(dashboardPage.modules, string);
 //        String actualModuleLabel = "";
 //        for (WebElement module : dashboardPage.modules) {
 //            actualModuleLabel = module.getText();

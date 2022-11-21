@@ -1,4 +1,4 @@
-package com.Try_Cloud.POM;
+package com.Try_Cloud.POM.Dashboard;
 
 import com.Try_Cloud.Utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -112,14 +112,6 @@ public class DashboardPage {
     public WebElement weatherInfo;
 
 
-    public void clickOnListElement (List<WebElement> list,String expectedElementText){
-        for (WebElement element : list) {
-            if (element.getText().contains(expectedElementText)) {
-                element.click();
-                break;
-            }
-        }
-    }
 
 
 
