@@ -112,6 +112,7 @@ public class Contacts_Steps {
 
 
 
+
     @When("user click on {string} button")
     public void userClickOnButton(String arg0) {
         contactsPage.profileSettingsButton.click();
