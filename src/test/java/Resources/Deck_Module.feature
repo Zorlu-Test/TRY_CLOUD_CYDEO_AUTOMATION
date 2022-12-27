@@ -26,7 +26,7 @@ Feature:
     And Clean deck board
     And Click on  add board bar
     Then Write down  "<Board names>" in placeholder as board names
-    When Press enter on keyboard and verify "<Board names>" board name created
+    And Press enter on keyboard and verify "<Board names>" board name created
     Examples:
       | Board names  |
       | Ensar Folder |
@@ -202,3 +202,5 @@ Feature:
     And Click on delete board
     And click red delete button
     Then Verify "School" deleted board disappeared from boards
+
+
